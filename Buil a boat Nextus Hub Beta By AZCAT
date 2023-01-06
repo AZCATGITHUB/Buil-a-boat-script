@@ -1,0 +1,81 @@
+local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCore("SendNotification", {
+Title = "Form Nextus";
+Text = "Welcome To Nextus Project"
+})
+wait(2)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/slf0Dev/Ocerium_Project/main/Library.lua"))()
+Window = Library.Main("Nextus Hub Project","RightControl")
+local Tab = Window.NewTab("Main")
+local Section = Tab.NewSection("Gold Stuff")
+
+local Button = Section.NewButton("Auto Win",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-47.6543617, 109.356468, -169.412994, -0.999998868, 4.48223545e-05, 0.0015036487, -8.82763551e-09, 0.999555826, -0.0298016891, -0.00150431658, -0.0298016556, -0.999554694)
+wait(-999)
+local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(23, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(-37.5838928, 61.9946098, 8816.7959, 0.999895096, -0.000477083988, 0.0144764259, 8.53183479e-09, 0.999457419, 0.0329374522, -0.0144842854, -0.0329339989, 0.999352574)}):Play()
+wait(23)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-56.5119476, -360.406219, 9346.4707, -0.999939322, 1.79496293e-08, 0.0110179363, 1.89895903e-08, 1, 9.42833722e-08, -0.0110179363, 9.44868788e-08, -0.999939322)
+wait(.1)
+local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(-54.8961945, -357.974731, 9489.78906, -0.999998569, 4.74639494e-10, 0.00169725425, 5.55676671e-10, 1, 4.77455551e-08, -0.00169725425, 4.7746429e-08, -0.999998569)}):Play()
+end)
+
+local Button = Section.NewButton("Smooth Auto Win",function()
+do
+local NM = game:GetService("Workspace"):FindFirstChild("Noclip")
+if NM then
+  NM:Destroy()
+  end
+end
+local Noclip = Instance.new("Part",Workspace)
+   Noclip.Name = "Noclip"
+   Noclip.CanCollide = true
+   Noclip.Anchored = true
+   Noclip.Transparency = 0.7
+   Noclip.Material = "Neon"
+   Noclip.BrickColor = BrickColor.new("Lapis")
+   Noclip.Size = Vector3.new(32,1.6,32)
+function Noclip()
+game:GetService("Workspace"):FindFirstChild("Noclip").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-3,0)
+end
+_G.Noclip = true
+while _G.Noclip do wait(-9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999)
+pcall(function()
+Noclip()
+end)
+end
+end)
+
+local Button = Section.NewButton("Disable Smooth Auto Win",function()
+do
+local NM = game:GetService("Workspace"):FindFirstChild("Noclip")
+if NM then
+  NM:Destroy()
+  end
+end
+local Noclip = Instance.new("Part",Workspace)
+   Noclip.Name = "Noclip"
+   Noclip.CanCollide = false
+   Noclip.Anchored = false
+   Noclip.Transparency = 0.7
+    Noclip.CastShadow = false
+   Noclip.BrickColor = BrickColor.new("Lime green")
+   Noclip.Material = "Neon"
+   Noclip.Size = Vector3.new(20,2,20)
+function Noclip()
+game:GetService("Workspace"):FindFirstChild("Noclip").CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-5,0)
+end
+_G.Noclip = false --Set Disable/Enable here (false / true)
+while _G.Noclip do wait(0)
+pcall(function()
+Noclip()
+end)
+end
+end)
+
+local Button = Section.NewButton("Reset Character",function()
+game.Players.LocalPlayer.Character.UpperTorso:Destroy()
+end)
