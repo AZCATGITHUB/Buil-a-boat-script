@@ -1,3 +1,5 @@
+--Script by AZCAT
+--Develop Rbx name GTAOCGG1412
 local StarterGui = game:GetService("StarterGui")
 StarterGui:SetCore("SendNotification", {
 Title = "Form Nextus";
